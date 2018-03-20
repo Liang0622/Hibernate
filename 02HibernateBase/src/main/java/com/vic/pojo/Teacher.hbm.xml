@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!--
+package:需要映射的实体类所在包
+class节点
+    属性
+        name:对应是实体类的类名，如果hibernate-mapping中没有写package属性，则必须写完全限定名
+        table：数据库中的表名，如果表名和类名一致，可以省略
+    节点
+        id：表中的主键
+            属性
+                name:必须和实体类中的属性名一致
+                column:必须和数据库中的字段名一致，如果字段名和属性名一致，则可以省略
+            节点
+                gennerator:主键生成策略
+                    assigned:主键必须由程序员自己设置
+                    identity：针对于mysql数据库的主键自增（mysql数据库说了算）
+                    sequence:针对于Oracle数据库中的序列
+                        <generator class="sequence">
+                            <param name="sequence">序列名称</param>
+                        </generator>
+                    increment:首先会产生一条sql    select max(id) from teacher
+                              之后id+1    赋值给主键
+-->
+
+<hibernate-mapping package="com.vic.pojo">
+    <!--
+    lazy="" 是否懒加载   默认值是true
+    -->
+    <class name="Teacher" table="teacher" lazy="false">
+        <id name="id" column="id">
+            <generator class="assigned"/>
+        </id>
+        <property name="name"/>
+    </class>
+</hibernate-mapping>

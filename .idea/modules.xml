@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/01HibernateORM/01HibernateORM.iml" filepath="$PROJECT_DIR$/01HibernateORM/01HibernateORM.iml" />
+      <module fileurl="file://$PROJECT_DIR$/02HibernateBase/02HibernateBase.iml" filepath="$PROJECT_DIR$/02HibernateBase/02HibernateBase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Hibernate.iml" filepath="$PROJECT_DIR$/Hibernate.iml" />
+    </modules>
+  </component>
+</project>

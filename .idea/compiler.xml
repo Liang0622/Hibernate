@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="01HibernateORM" />
+        <module name="02HibernateBase" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="01HibernateORM" target="1.5" />
+      <module name="02HibernateBase" target="1.5" />
+      <module name="Hibernate" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
