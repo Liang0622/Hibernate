@@ -93,4 +93,100 @@ public class TeacherTest {
         System.out.println("***************************************");
     }
 
+    /**
+     * get和load的异同
+     *   相同点：都支持缓存
+     *      首先会去hibernate的一级缓存（session）中查询是否有对应数据
+     *      如果有，直接返回，不会再去访问数据库。
+     *      如果没有，则会去我们配置的二级缓存（在已配置的情况下）去查询
+     *      如果二级缓存也没有，才会访问数据库
+     *   不同点：
+     *      get
+     *          01.调用get()方法之后，立即产生sql语句
+     *          02.如果数据库中有对应数据，直接返回
+     *              如果数据库中没有对应的数据，则返回null
+     *      load
+     *          01.支持懒加载，可以在用户需要时才生成sql语句
+     *          02.如果数据库中有对应数据，直接返回
+     *              如果数据库中没事对应的数据，则抛出ObjectNotFoundException异常
+     *
+     */
+
+    /**
+     * sql语句在分界线上，说明是立即加载
+     */
+    @Test
+    public void getTeacher(){
+        Teacher teacher=(Teacher) session.get(Teacher.class,2);
+        System.out.println("******************************************");
+        System.out.println(teacher);
+    }
+
+    /**
+     * sql语句在分界线下，说明是懒加载，及调用的时候生成sql语句
+     * （前提是开启懒加载，即lazy="true",默认是开启的）
+     */
+    @Test
+    public void loadTeacher(){
+        Teacher teacher=(Teacher) session.load(Teacher.class,1);
+        System.out.println("*****************************************");
+        System.out.println(teacher);
+    }
+
+    /**
+     * load也可以立即加载，只需关闭懒加载
+     * 在对用的hbm,xml文件中的class节点上，增加lazy="false"属性
+     * 关闭后，sql语句生成在分解线上方
+     */
+    @Test
+    public void loadTeacher2(){
+        Teacher teacher=(Teacher) session.load(Teacher.class,1);
+        System.out.println("********************************************");
+        System.out.println(teacher);
+    }
+    /**
+     * 验证get会把查询到的数据放进session的缓存中
+     * 控制台只会显示一条sql语句
+     */
+    @Test
+    public void getTeacher2(){
+        System.out.println("***********************************");
+        Teacher teacher1=(Teacher) session.get(Teacher.class,2);
+        Teacher teacher2=(Teacher) session.get(Teacher.class,2);
+        System.out.println("***********************************");
+    }
+
+    /**
+     * evict
+     * 从session中清楚指定的对象
+     * 再次查询id为1的Teacher是会生成新的sql语句
+     */
+    @Test
+    public void evictTeacher(){
+        Teacher teacher1=(Teacher) session.get(Teacher.class,1);
+        Teacher teacher2=(Teacher) session.get(Teacher.class,2);
+        System.out.println("****************************************************");
+        //清楚teacher1    再次查询
+        session.evict(teacher1);
+        Teacher teacher3=(Teacher) session.get(Teacher.class,1);//控制台显示sql语句
+        //teacher2=(Teacher) session.get(Teacher.class,2);
+    }
+
+    /**
+     * clear
+     * 从session中清空所有对象
+     * 一共生成了4条sql语句
+     */
+    @Test
+    public void clearTeacher(){
+        Teacher teacher1=(Teacher) session.get(Teacher.class,1);
+        Teacher teacher2=(Teacher) session.get(Teacher.class,2);
+        System.out.println("****************************************************");
+        //清空所有对象    再次查询
+        session.clear();
+        teacher1=(Teacher) session.get(Teacher.class,1);
+        teacher2=(Teacher) session.get(Teacher.class,2);
+
+    }
+
 }
