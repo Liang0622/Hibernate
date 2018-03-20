@@ -54,11 +54,43 @@ public class TeacherTest {
         //05.创建新增对象
         Teacher teacher=new Teacher();
         teacher.setId(2);
-        teacher.setName("小s");
+        teacher.setName("大白222");
         //06.持久化操作
         System.out.println("*************************************");
         session.save(teacher);  //identity产生sql语句
         System.out.println("*************************************");
+    }
+
+    /**
+     * 数据库分两步执行删除操作
+     *
+     * 01.首先根据对象的id 去数据库中查询是否有此记录
+     * 02.如果存在      根据id删除指定的信息     会产生2条sql语句
+     *    如果不存在    只执行查询操作      只有1条sql语句
+     */
+    @Test
+    public void deleteTeacher(){
+        //创建需要删除的对象
+        Teacher teacher=new Teacher();
+        teacher.setId(2);
+        System.out.println("***************************************");
+        session.delete(teacher);    //执行删除
+        System.out.println("***************************************");
+    }
+
+    /**
+     * 修改
+     * 一步到位，直接执行update的语句，不会先进行查询操作
+     */
+    @Test
+    public void updateTeacher(){
+        //创建需要修改的对象
+        Teacher teacher=new Teacher();
+        teacher.setId(1);
+        teacher.setName("超人666");
+        System.out.println("**************************************");
+        session.update(teacher);
+        System.out.println("***************************************");
     }
 
 }
