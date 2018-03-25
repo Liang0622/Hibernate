@@ -364,5 +364,4 @@ public class TeacherTest {
         System.out.println(teacher2.getName());//显示为小黑。数据库中id为1的对象name原始数据并不是“小黑”
     }
 
-
 }

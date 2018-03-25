@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/01HibernateORM/01HibernateORM.iml" filepath="$PROJECT_DIR$/01HibernateORM/01HibernateORM.iml" />
       <module fileurl="file://$PROJECT_DIR$/02HibernateBase/02HibernateBase.iml" filepath="$PROJECT_DIR$/02HibernateBase/02HibernateBase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/03HibernateSate/03HibernateSate.iml" filepath="$PROJECT_DIR$/03HibernateSate/03HibernateSate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04HibernateListAndIterator/04HibernateListAndIterator.iml" filepath="$PROJECT_DIR$/04HibernateListAndIterator/04HibernateListAndIterator.iml" />
       <module fileurl="file://$PROJECT_DIR$/Hibernate.iml" filepath="$PROJECT_DIR$/Hibernate.iml" />
     </modules>
   </component>

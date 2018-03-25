@@ -8,11 +8,15 @@
         <outputRelativeToContentRoot value="true" />
         <module name="01HibernateORM" />
         <module name="02HibernateBase" />
+        <module name="03HibernateSate" />
+        <module name="04HibernateListAndIterator" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="01HibernateORM" target="1.5" />
       <module name="02HibernateBase" target="1.5" />
+      <module name="03HibernateSate" target="1.5" />
+      <module name="04HibernateListAndIterator" target="1.5" />
       <module name="Hibernate" target="1.5" />
     </bytecodeTargetLevel>
   </component>

@@ -8,6 +8,8 @@
   <modules>
     <module>01HibernateORM</module>
     <module>02HibernateBase</module>
+      <module>03HibernateSate</module>
+      <module>04HibernateListAndIterator</module>
   </modules>
   <packaging>pom</packaging>
 
