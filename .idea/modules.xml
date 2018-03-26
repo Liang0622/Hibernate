@@ -6,6 +6,10 @@
       <module fileurl="file://$PROJECT_DIR$/02HibernateBase/02HibernateBase.iml" filepath="$PROJECT_DIR$/02HibernateBase/02HibernateBase.iml" />
       <module fileurl="file://$PROJECT_DIR$/03HibernateSate/03HibernateSate.iml" filepath="$PROJECT_DIR$/03HibernateSate/03HibernateSate.iml" />
       <module fileurl="file://$PROJECT_DIR$/04HibernateListAndIterator/04HibernateListAndIterator.iml" filepath="$PROJECT_DIR$/04HibernateListAndIterator/04HibernateListAndIterator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/05ParameterAndSelect/05ParameterAndSelect.iml" filepath="$PROJECT_DIR$/05ParameterAndSelect/05ParameterAndSelect.iml" />
+      <module fileurl="file://$PROJECT_DIR$/06PageDemo/06PageDemo.iml" filepath="$PROJECT_DIR$/06PageDemo/06PageDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/07HibernateRelationMapping/07HibernateRelationMapping.iml" filepath="$PROJECT_DIR$/07HibernateRelationMapping/07HibernateRelationMapping.iml" />
+      <module fileurl="file://$PROJECT_DIR$/08OpenSessionInView/08OpenSessionInView.iml" filepath="$PROJECT_DIR$/08OpenSessionInView/08OpenSessionInView.iml" />
       <module fileurl="file://$PROJECT_DIR$/Hibernate.iml" filepath="$PROJECT_DIR$/Hibernate.iml" />
     </modules>
   </component>

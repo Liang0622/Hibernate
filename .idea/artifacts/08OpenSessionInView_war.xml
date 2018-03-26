@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="08OpenSessionInView:war">
+    <output-path>$PROJECT_DIR$/08OpenSessionInView/target</output-path>
+    <root id="archive" name="08OpenSessionInView.war">
+      <element id="artifact" artifact-name="08OpenSessionInView:war exploded" />
+    </root>
+  </artifact>
+</component>

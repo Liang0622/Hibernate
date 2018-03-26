@@ -10,6 +10,10 @@
         <module name="02HibernateBase" />
         <module name="03HibernateSate" />
         <module name="04HibernateListAndIterator" />
+        <module name="05ParameterAndSelect" />
+        <module name="06PageDemo" />
+        <module name="07HibernateRelationMapping" />
+        <module name="08OpenSessionInView" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -17,6 +21,11 @@
       <module name="02HibernateBase" target="1.5" />
       <module name="03HibernateSate" target="1.5" />
       <module name="04HibernateListAndIterator" target="1.5" />
+      <module name="05ParameterAndSelect" target="1.5" />
+      <module name="06PageDemo" target="1.5" />
+      <module name="07HibernateRelationMapping" target="1.5" />
+      <module name="08HibernateOpenSessionInView" target="1.5" />
+      <module name="08OpenSessionInView" target="1.5" />
       <module name="Hibernate" target="1.5" />
     </bytecodeTargetLevel>
   </component>
