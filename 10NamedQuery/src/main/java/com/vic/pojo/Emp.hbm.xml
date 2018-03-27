@@ -17,6 +17,7 @@
         <many-to-one name="dept" column="deptNo" class="Dept"/>
     </class>
 
+
     <!-- HQL命名查询-->
     <query name="getAllEmps">
         <![CDATA[
@@ -49,5 +50,6 @@
               select empId,name,sal,job from emp where  empId=:id
           ]]>
     </sql-query>
+
 
 </hibernate-mapping>

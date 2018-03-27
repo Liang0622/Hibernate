@@ -36,6 +36,7 @@ public class NamedQueryTest {
             System.out.println(emp);
         }
     }
+
     /**
      * 使用sql-query来命名查询:
      * 返回的是一个Object数组！
